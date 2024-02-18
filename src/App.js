@@ -1,10 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Hello from "./components/hello/Hello";
+import TaskPage from "./Pages/TaskPages/TaskPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Hello />
+      <TaskPage />
+    </div>
+  );
+}
+
+export default App;
+
+{
+  /* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +28,5 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
+      </header> */
 }
-
-export default App;
