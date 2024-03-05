@@ -1,32 +1,26 @@
-import logo from "./logo.svg";
+import { BrowserRouter, Navigate } from "react-router-dom";
 import "./App.css";
+import TaskPage from "./Pages/TaskPage/TaskPage";
 import Hello from "./components/hello/Hello";
-import TaskPage from "./Pages/TaskPages/TaskPage";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Menu from "./components/menu/Menu";
+import TaskDetails from "./Pages/TaskDetails/TaskDetails";
 function App() {
   return (
     <div className="App">
-      <Hello />
-      <TaskPage />
+      <Router>
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Navigate to="/tasks" />} />
+          <Route path="/hello" element={<Hello />} />
+          <Route path="/Tasks/" element={<TaskPage />} />
+          <Route path="/Tasks/:id" element={<TaskDetails />} />
+        </Routes>
+      </Router>
+      {/* <Hello />
+      <TaskPage /> */}
     </div>
   );
 }
 
 export default App;
-
-{
-  /* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */
-}

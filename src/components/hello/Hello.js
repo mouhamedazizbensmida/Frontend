@@ -1,13 +1,13 @@
 import "./Hello.css";
 function Hello() {
   const world = "world";
-  function hi() {
-    return <div>Hi</div>;
+  function Hi() {
+    return <div>hi</div>;
   }
   return (
     <div className="hello">
       <p>hello {world}</p>
-      {hi()}
+      {Hi()}
     </div>
   );
 }

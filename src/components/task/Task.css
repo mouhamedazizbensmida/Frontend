@@ -1,5 +1,4 @@
 
-
 .task {
     border: 1px solid gray;
     padding: 20px;
@@ -17,4 +16,7 @@
 
 .actions {
     color: blue;
+}
+.custom-task{
+    color:red
 }
